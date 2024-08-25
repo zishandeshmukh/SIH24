@@ -1,0 +1,16 @@
+{
+  "name": "gradsy",
+  "version": "1.0.0",
+  "description": "backend for gradsy",
+  "main": "app.js",
+  "scripts": {
+    "test": "node app.js"
+  },
+  "author": "Orbit Tech",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2",
+    "gradsy": "file:",
+    "sqlite3": "^5.1.7"
+  }
+}
