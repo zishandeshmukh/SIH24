@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,28 +7,22 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body {
-            background-image: url('https://source.unsplash.com/1600x900/?education,college,learning');
+            background-image: url('https://source.unsplash.com/1600x900/?education,college');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
         }
-
-        .backdrop {
-            background: rgba(255, 255, 255, 0.8);
-            backdrop-filter: blur(10px);
-        }
     </style>
 </head>
+<body class="bg-opacity-80 bg-gray-900 min-h-screen flex flex-col justify-center items-center">
 
-<body class="bg-gray-900 min-h-screen flex flex-col justify-center items-center">
-
-    <div class="backdrop shadow-2xl rounded-lg p-8 max-w-md w-full">
-        <h2 class="text-3xl font-extrabold text-center text-gray-800 mb-8">Join Our Community</h2>
-
-        <div class="flex justify-center mb-6 space-x-4">
-            <button id="student-btn" class="text-blue-600 font-semibold px-4 py-2 hover:text-blue-700 transition duration-300 border-b-4 border-blue-600">Student</button>
-            <button id="alumni-btn" class="text-green-600 font-semibold px-4 py-2 hover:text-green-700 transition duration-300 border-b-4 border-green-600">Alumni</button>
-            <button id="college-btn" class="text-purple-600 font-semibold px-4 py-2 hover:text-purple-700 transition duration-300 border-b-4 border-purple-600">College</button>
+    <div class="bg-white shadow-2xl rounded-lg p-8 max-w-md w-full bg-opacity-90">
+        <h2 class="text-2xl font-bold text-center text-gray-800 mb-8">Join Our Community</h2>
+        
+        <div class="flex justify-center mb-6">
+            <button id="student-btn" class="text-blue-600 font-semibold mx-2 hover:text-blue-700 transition duration-300">Student</button>
+            <button id="alumni-btn" class="text-green-600 font-semibold mx-2 hover:text-green-700 transition duration-300">Alumni</button>
+            <button id="college-btn" class="text-purple-600 font-semibold mx-2 hover:text-purple-700 transition duration-300">College</button>
         </div>
 
         <form id="signup-form" class="space-y-4">
@@ -62,7 +55,7 @@
                 <input type="text" class="${inputStyles} focus:ring-blue-400" placeholder="Enter your Phone Number">
             </div>
             <button class="w-full bg-blue-600 text-white rounded-lg py-2 hover:bg-blue-700 transition duration-300">Sign Up</button>
-            <p class="text-center text-gray-500 mt-4">Already have an account? <a href="#" id="student-login" class="text-blue-600 hover:underline">Login</a></p>
+            <p class="text-center text-gray-500 mt-4">Already have an account? <a href="#" class="text-blue-600 hover:underline">Login</a></p>
         `;
 
         const alumniForm = `
@@ -82,7 +75,7 @@
                 <input type="text" class="${inputStyles} focus:ring-green-400" placeholder="Enter your Phone Number">
             </div>
             <button class="w-full bg-green-600 text-white rounded-lg py-2 hover:bg-green-700 transition duration-300">Sign Up</button>
-            <p class="text-center text-gray-500 mt-4">Already have an account? <a href="#" id="alumni-login" class="text-green-600 hover:underline">Login</a></p>
+            <p class="text-center text-gray-500 mt-4">Already have an account? <a href="#" class="text-green-600 hover:underline">Login</a></p>
         `;
 
         const collegeForm = `
@@ -99,34 +92,23 @@
                 <input type="password" class="${inputStyles} focus:ring-purple-400" placeholder="Enter Password">
             </div>
             <button class="w-full bg-purple-600 text-white rounded-lg py-2 hover:bg-purple-700 transition duration-300">Sign Up</button>
-            <p class="text-center text-gray-500 mt-4">Already have an account? <a href="#" id="college-login" class="text-purple-600 hover:underline">Login</a></p>
+            <p class="text-center text-gray-500 mt-4">Already have an account? <a href="#" class="text-purple-600 hover:underline">Login</a></p>
         `;
-
-        function redirectToLogin(type) {
-            // Placeholder for redirect logic, replace with actual navigation code
-            alert(`Redirecting to ${type} login page...`);
-            // window.location.href = `/${type}-login.html`; // Example of how to redirect
-        }
 
         studentBtn.addEventListener('click', () => {
             form.innerHTML = studentForm;
-            document.getElementById('student-login').addEventListener('click', () => redirectToLogin('student'));
         });
 
         alumniBtn.addEventListener('click', () => {
             form.innerHTML = alumniForm;
-            document.getElementById('alumni-login').addEventListener('click', () => redirectToLogin('alumni'));
         });
 
         collegeBtn.addEventListener('click', () => {
             form.innerHTML = collegeForm;
-            document.getElementById('college-login').addEventListener('click', () => redirectToLogin('college'));
         });
 
         // Load the default form (student form)
         form.innerHTML = studentForm;
-        document.getElementById('student-login').addEventListener('click', () => redirectToLogin('student'));
     </script>
 </body>
-
 </html>
