@@ -1,5 +1,5 @@
 <div class="flex flex-col md:flex-row justify-between " style="width:100vw">
-    <img id="imag" src="/images.png" alt="alum_img" class=" h-screen object-cover">
+    <img id="imag" src="/images.jpg" alt="alum_img" class=" h-screen object-cover">
 
     <div class=" absolute md:relative flex items-center justify-center p-4">
         <div class="bg-white bg-opacity-70 backdrop-blur rounded-lg shadow-lg p-6 max-w-md w-full animate-fadeIn">
