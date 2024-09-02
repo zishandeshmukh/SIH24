@@ -1,10 +1,10 @@
 <script>
     import { goto } from '$app/navigation';
 
-    let formType = 'student';
+    let formContent = 'student';
 
-    function showForm(type) {
-        formType = type;
+    function showForm(formType) {
+        formContent = formType;
     }
 
     function redirectToLogin() {
@@ -30,7 +30,7 @@
         <button on:click={() => showForm('college')} class="text-purple-600 font-semibold mx-2 hover:text-purple-700 transition duration-300">College</button>
     </div>
 
-    {#if formType === 'student'}
+    {#if formContent === 'student'}
         <form class="space-y-4">
             <div>
                 <label class="block text-gray-700">Student ID</label>
@@ -47,14 +47,14 @@
             <div>
                 <input type="text" class="w-full border-gray-300 rounded-lg shadow-sm focus:ring-blue-400" placeholder="Enter your Phone Number">
             </div>
-            <button type="submit" class="w-full bg-blue-600 text-white rounded-lg py-2 hover:bg-blue-700 transition duration-300">Sign Up</button>
+            <button class="w-full bg-blue-600 text-white rounded-lg py-2 hover:bg-blue-700 transition duration-300">Sign Up</button>
             <p class="text-center text-gray-500 mt-4">Already have an account? <button on:click={redirectToLogin} class="text-blue-600 hover:underline">Login</button></p>
         </form>
     {/if}
-    {#if formType === 'alumni'}
+    {#if formContent === 'alumni'}
         <!-- Alumni Form Content -->
     {/if}
-    {#if formType === 'college'}
+    {#if formContent === 'college'}
         <!-- College Form Content -->
     {/if}
 </div>

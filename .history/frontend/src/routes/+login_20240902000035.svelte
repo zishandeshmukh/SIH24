@@ -1,0 +1,1 @@
+D:\normal projects\SIH24\frontend\src\routes\+login.svelte
